@@ -7,7 +7,7 @@
         <div class="item-infos">
             <span  class="title-style">Item em produção ...</span>
 
-            <div>
+            <div class="item-content">
                 <div>imagem</div>
             
                 <div class="item-description">
@@ -25,6 +25,17 @@
                 </div>
             </div>
         </div>
+
+        <div class="divider"></div>
+        <div class="item-infos">
+            <span class="title-style">Quantidade de itens</span>
+
+            <div class="production-infos">
+                <app-production-control [title] = "'Produzido'"></app-production-control>
+                <app-production-control [title] = "'Rejeitado'"></app-production-control>
+            </div>
+        </div>
+
     </div>
 
     <div class="action-buttons">

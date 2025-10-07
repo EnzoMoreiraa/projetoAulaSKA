@@ -1,0 +1,43 @@
+.terminal-container {
+    height: 100dvh; // Usar 100 para evitar problemas no mobile
+    width: 100dvw; // Usar 100 para evitar problemas no mobile
+
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 0.3fr;
+}
+
+.status-bar {
+    display: flex;
+    align-items: center;
+    padding-left: 1%;
+
+    font-size: 1.8em;
+    font-weight: bold;
+
+    color: var(--color-dark-blue-1000);
+}
+
+.terminal-div {
+    display: grid;
+    grid-template-columns: 1.01fr 0fr 1.4fr;
+
+    align-items: center;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1%;
+
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-dark-blue-700);
+}

@@ -25,6 +25,18 @@
     overflow: hidden;
 }
 
+.progress-filled {
+    height: 100%;
+    padding-left: 5%;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    transition: width 0.5s ease;
+}
+
 .progress-remaining {
     flex: 1;
     display: flex;
@@ -49,13 +61,13 @@ button {
 
     color: var(--color-text);
     transition: ease 0.3s;
-}
 
-button:hover {
-    transform: scale(1.05);
-}
+    &:hover {
+        transform: scale(1.05);
+    }
 
-button:active {
-    transform: scale(0.95);
-    background-color: var(--color-dark-blue-900);
+    &:active {
+        transform: scale(0.95);
+        background-color: var(--color-dark-blue-900);
+    }
 }

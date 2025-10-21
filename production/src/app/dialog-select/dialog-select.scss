@@ -2,32 +2,32 @@ h2 {
     padding-top: 20px;
     text-align: center;
 }
-
+ 
 .list-options {
     display: flex;
     flex-direction: column;
     gap: 1vh;
-
+ 
     max-height: 50vh;
     width: 470px;
     padding: 10px 20px 20px 40px;
-
-    overflow: auto;
+ 
+    overflow-y: auto;
 }
-
+ 
 .options {
     display: flex;
     flex-direction: row;
 
     padding: 2vh;
     color: var(--color-text);
-
+ 
     background-color: var(--color-dark-blue-900);
     border: 1px solid white;
     border-radius: 10px;
     cursor: pointer;
 }
-
+ 
 .options-description {
     width: 100%;
     align-items: center;
@@ -36,23 +36,31 @@ h2 {
     flex-direction: column;
     gap: 0.5vh;
 }
-
+ 
 .option-label {
     font-size: x-large;
 }
-
+ 
 .option-description {
-    font-size: x-large;
-    color: var(--color-dark-gray-300);;
+    font-size: large;
+    color: var(--color-dark-gray-300);
 }
-
+ 
 .footer {
-    padding: 10px 20 px;
+    padding: 10px 20px;
 }
-
+ 
 button {
     width: 100%;
     border-radius: 5px;
     color: var(--color-text) !important;
     background-color: var(--color-blue-button);
+}
+
+.options:hover {
+    background-color: var(--color-dark-blue-1000);
+}
+
+.selected {
+    background-color: var(--color-dark-blue-1000);
 }

@@ -48,6 +48,15 @@
     background-color: var(--color-dark-blue-800);
 }
 
+.production-center {
+    font-weight: bold;
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 button {
     height: 60%;
     width: 100%;

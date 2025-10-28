@@ -4,20 +4,20 @@
     </div>
 
     <div class="terminal-div">
-        <div class="item-infos">
-            <span  class="title-style">Item em produção: {{productionOrder.value}}</span>
+        <div class="item-infos" [ngStyle]="disabledStyle">
+            <span class="title-style">Item em produção: {{productionOrder.value}}</span>
 
             <div class="item-content">
-                <img [src]="productionOrder.productImage"/>
-            
+                <img [src]="productionOrder.productImage" (click) = "openImage(productionOrder.productImage)">
+
                 <div class="item-description">
                     <div>
-                        <span class="item-title-description">Ordem de produção: </span>
+                        <span class="item-title-description">Ordem de Produção: </span>
                         <span>{{productionOrder.key}}</span>
                     </div>
                     <div class="production-item-information">
                         <div class="production-item">
-                            <span class="item-title-description">Cor do produto: </span>
+                            <span class="item-title-description">Cor do Produto: </span>
                             <span>{{productionOrder.color}}</span>
                         </div>
                         <div class="item-color" [style.background-color]="OrderColors_e[productionOrder.color]"></div>
@@ -25,35 +25,31 @@
                 </div>
             </div>
         </div>
-
         <div class="divider"></div>
         <div class="item-infos">
-            <span class="title-style">Quantidade de itens</span>
+            <span class="title-style">Quantidade de Itens</span>
 
             <div class="production-infos">
                 <app-production-control 
-                [title] = "'Produzido'"
-                [icon] = "TbCircleCheckFilled"
-                [productionOrderQuantity] = "productionOrder.quatity"
-                [productionOrderStatus] = "productionStatus"
-                [productionOrderKey] = "productionOrder.key"
+                [title]="'Produzido'"
+                [icon]="'TbCircleCheckFilled'"
+                [productionOrderQuantity]='productionOrder.quantity'
+                [productionOrderStatus]='productionStatus'
+                [productionOrderKey]='productionOrder.key'
                 ></app-production-control>
-
-                <app-production-control 
-                [title] = "'Rejeitado'"
-                [icon] = "TbCircleCheckFilled"
-                [productionOrderQuantity] = "productionOrder.quatity"
-                [productionOrderStatus] = "productionStatus"
-                [productionOrderKey] = "productionOrder.key"
-                ></app-production-control>
+                <app-production-control
+                [title]="'Rejeitado'"
+                [icon]="'TbCircleCheckFilled'"
+                [productionOrderQuantity]='productionOrder.quantity'
+                [productionOrderStatus]='productionStatus'
+                [productionOrderKey]='productionOrder.key'></app-production-control>
             </div>
         </div>
-
     </div>
 
     <div class="action-buttons">
-        <button mat-button class="stop-button" [disabled] = "productionStatus.status === ProductionStatus_e.WaitingProduction" (click) = "setStopType()">Parada</button>
-        <button mat-button class="production-button" (click) = "setProductionOrder()">Produção</button>
+        <button mat-button class="stop-button" [disabled]="productionStatus.status === ProductionStatus_e.WaitingProduction" (click)="setStopType()">Parada</button>
+        <button mat-button (click)="setProductionOrder()" class="production-button">Produção</button>
     </div>
 
     <div class="footer">

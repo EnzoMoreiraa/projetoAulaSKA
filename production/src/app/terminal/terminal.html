@@ -31,8 +31,21 @@
             <span class="title-style">Quantidade de itens</span>
 
             <div class="production-infos">
-                <app-production-control [title] = "'Produzido'"></app-production-control>
-                <app-production-control [title] = "'Rejeitado'"></app-production-control>
+                <app-production-control 
+                [title] = "'Produzido'"
+                [icon] = "TbCircleCheckFilled"
+                [productionOrderQuantity] = "productionOrder.quatity"
+                [productionOrderStatus] = "productionStatus"
+                [productionOrderKey] = "productionOrder.key"
+                ></app-production-control>
+
+                <app-production-control 
+                [title] = "'Rejeitado'"
+                [icon] = "TbCircleCheckFilled"
+                [productionOrderQuantity] = "productionOrder.quatity"
+                [productionOrderStatus] = "productionStatus"
+                [productionOrderKey] = "productionOrder.key"
+                ></app-production-control>
             </div>
         </div>
 
